@@ -1,0 +1,31 @@
+<main class='fdornas-main'>
+  <div class='container'>
+    <%= render 'layouts/navbar' %>
+
+    <div class='row content'>
+      <div class='col-md-8 col-12 text-center align-items-center'>
+        <div class='contact-info'>
+          <h4 class='contact-title'>
+            EMAIL
+          </h4>
+          <p class='contact-text'>
+            fdornas@gmail.com
+          </p>
+
+          <h4 class='contact-title'>
+            TELEFONE
+          </h4>
+          <p class='contact-text'>
+            +55 31 9864-3630
+          </p>
+        </div>
+      </div>
+
+      <div class='col-md-4 col-12'>
+        <%= image_tag asset_path('cover.png'), class: 'about-img' %>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+</main>

@@ -1,0 +1,31 @@
+<main class='fdornas-main'>
+  <div class='container'>
+    <%= render 'layouts/navbar' %>
+
+    <div class='row content'>
+      <div class='col-12'>
+        <div class='portfolio-item'>
+          <h4 class='portfolio-title'>
+            TÍTULO DA OBRA
+          </h4>
+          <p class='portfolio-description'>
+            An award winning short film based on the play by French-Canadian playwright Annick Lefebvre, Les Câlins Cheaps (Cheap Hugs) is a bilingual short (French/English) that follows two women reeling from the loss of their mutual friend by suicide who find themselves in an unexpected moment of connection. Currently in its festival run.
+          </p>
+          <%= image_tag asset_path('portfolio-example-2.png'), class: 'portfolio-img' %>
+        </div>
+
+        <div class='portfolio-item'>
+          <h4 class='portfolio-title'>
+            TÍTULO DA OBRA
+          </h4>
+          <p class='portfolio-description'>
+            An award winning short film based on the play by French-Canadian playwright Annick Lefebvre, Les Câlins Cheaps (Cheap Hugs) is a bilingual short (French/English) that follows two women reeling from the loss of their mutual friend by suicide who find themselves in an unexpected moment of connection. Currently in its festival run.
+          </p>
+          <%= image_tag asset_path('portfolio-example.png'), class: 'portfolio-img' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+</main>
