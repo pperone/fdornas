@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fdornas</title>
+    <title>Fernando Dornas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link rel="icon" href=<%= asset_path('logo-512.svg') %>>
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="57x57">
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="72x72">
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="76x76">
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="114x114">
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="144x144">
+    <link rel="apple-touch-icon" href=<%= asset_path('apple-favicon.png') %> sizes="152x152">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>

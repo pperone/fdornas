@@ -62,10 +62,12 @@ body {
 
     .cover-container {
       padding-left: 0;
+      padding-right: 0;
       background-color: black;
 
       .home-cover {
-        height: 600px;
+        max-height: 600px;
+        max-width: 100%;
       }
     }
 
@@ -81,7 +83,10 @@ body {
 
     .contact-info {
       position: relative;
-      top: 100px;
+      
+      @media (min-width: 992px) {
+        top: 100px;
+      }
 
       .contact-title {
         font-family: 'Poppins ExtraBold';
@@ -119,5 +124,55 @@ body {
       font-size: 0.9em;
       line-height: 1.8;
     }
+  }
+
+  .navbar-drop-menu {
+    z-index: 2147483647;
+    background-color: white;
+    width: 200px;
+    position: absolute;
+    right: 10px;
+    border-radius: 3px;
+    border: solid 1px gray;
+
+    @media (max-width: 768px) {
+      top: 100px;
+    }
+
+    @media (min-width: 769px) {
+      top: 150px;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+  
+    .dropdown-item {
+      line-height: 50px;
+      height: 50px;
+    }
+  
+    .username-item:hover {
+      background-color: rgb(244, 244, 244);
+    }
+  
+    a {
+      .regular-item {
+        padding-left: 10px;
+        color: gray;
+      }
+  
+      .regular-item:hover {
+        background-color: rgb(244, 244, 244);
+      }
+    }
+  }
+  
+  .dropdown-hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
   }
 }

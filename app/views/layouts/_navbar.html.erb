@@ -4,7 +4,7 @@
     <p class='roles'>ator/roteirista</p>
   </div>
 
-  <nav class='navbar navbar-expand-lg navbar-light'>
+  <nav class='navbar navbar-expand-lg navbar-light d-none d-lg-flex'>
     <ul class='navbar-nav d-flex'>
       <li class='nav-item'><a href=<%= home_path %> class='nav-link'>HOME</a></li>
       <li class='nav-item'><a href=<%= about_path %> class='nav-link'>SOBRE</a></li>
@@ -12,4 +12,31 @@
       <li class='nav-item'><a href=<%= contact_path %> class='nav-link'>CONTATO</a></li>
     </ul>
   </nav>
+
+  <div class='d-lg-none d-flex' data-controller='dropdown'>
+    <i class="bi bi-list" data-action='click->dropdown#toggle'></i>
+
+    <div class='navbar-drop-menu dropdown-hidden' id='navbar-drop' data-visible="false">
+      <a href=<%= home_path %>>
+        <div class='dropdown-item regular-item'>
+          HOME
+        </div>
+      </a>
+      <a href=<%= about_path %>>
+        <div class='dropdown-item regular-item'>
+          SOBRE
+        </div>
+      </a>
+      <a href=<%= portfolio_path %>>
+        <div class='dropdown-item regular-item'>
+          TRABALHOS
+        </div>
+      </a>
+      <a href=<%= contact_path %>>
+        <div class='dropdown-item regular-item'>
+          CONTATO
+        </div>
+      </a>
+    </div>
+  </div>
 </header>
