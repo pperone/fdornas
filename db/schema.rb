@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_04_25_172202) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "abouts", force: :cascade do |t|
     t.text "text"
     t.datetime "created_at", null: false
@@ -21,9 +24,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_172202) do
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -76,7 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_172202) do
     t.string "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "contact_id", null: false
+    t.bigint "contact_id", null: false
     t.index ["contact_id"], name: "index_contact_items_on_contact_id"
   end
 
@@ -95,7 +98,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_172202) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "portfolio_id", null: false
+    t.bigint "portfolio_id", null: false
     t.index ["portfolio_id"], name: "index_portfolio_items_on_portfolio_id"
   end
 
