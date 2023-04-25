@@ -3,6 +3,8 @@ ActiveAdmin.register Contact do
        label: 'Contact',
        url: '/admin/contact'
 
+  permit_params :image
+
   actions :show, :edit, :update
 
   form do |f|

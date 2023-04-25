@@ -3,6 +3,8 @@ ActiveAdmin.register Home do
        label: 'Home',
        url: '/admin/home'
 
+  permit_params :cover
+
   actions :show, :edit, :update
 
   form do |f|

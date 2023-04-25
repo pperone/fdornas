@@ -3,6 +3,8 @@ ActiveAdmin.register About do
        label: 'About',
        url: '/admin/about'
 
+  permit_params :text, :image
+
   actions :show, :edit, :update
 
   form do |f|
