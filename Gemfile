@@ -49,6 +49,7 @@ gem "sassc-rails"
 gem "image_processing", "~> 1.2"
 
 gem 'activeadmin'
+gem 'activeadmin_quill_editor'
 gem 'devise'
 
 group :development, :test do
