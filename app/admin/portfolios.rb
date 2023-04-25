@@ -12,7 +12,25 @@ ActiveAdmin.register Portfolio do
       f.has_many :portfolio_items, new_record: 'New portfolio item', remove_record: 'Remove portfolio item', allow_destroy: true do |o|
         o.input :image, as: :file
         o.input :title
-        o.input :description
+        o.input :description, as: :quill_editor, input_html: { data:
+          { options:
+            { modules:
+              { toolbar:
+                [%w[bold italic underline strike],
+                 %w[blockquote code-block],
+                 [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                 [{ 'align': [] }],
+                 ['link'],
+                 [{ 'size': ['small', false, 'large', 'huge'] }],
+                 [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                 [{ 'indent': '-1' }, { 'indent': '+1' }],
+                 [{ 'direction': 'rtl' }],
+                 [{ 'color': [] }, { 'background': [] }],
+                 [{ 'font': [] }],
+                 ['clean'],
+                 ['image'],
+                 ['video']] },
+              theme: 'snow' } } }
       end
 
       actions do

@@ -10,7 +10,7 @@
               <%= item.title.upcase %>
             </h4>
             <p class='portfolio-description'>
-              <%= item.description %>
+              <%= item.description.html_safe %>
             </p>
             <%= image_tag item.image, class: 'portfolio-img' %>
           </div>

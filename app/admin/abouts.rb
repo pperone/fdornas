@@ -28,7 +28,7 @@ ActiveAdmin.register About do
                ['image'],
                ['video']] },
             theme: 'snow' } } }
-      f.file_field :image
+      f.input :image, as: :file
 
       actions do
         action :submit

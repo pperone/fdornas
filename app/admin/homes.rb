@@ -9,7 +9,7 @@ ActiveAdmin.register Home do
 
   form do |f|
     inputs do
-      f.file_field :cover
+      f.input :cover, as: :file
 
       actions do
         action :submit
