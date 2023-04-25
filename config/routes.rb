@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'about', action: :about, controller: 'application'
   get 'portfolio', action: :portfolio, controller: 'application'
   get 'contact', action: :contact, controller: 'application'
+
+  root to: 'application#home'
 end
