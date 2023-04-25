@@ -3,7 +3,7 @@ ActiveAdmin.register Contact do
        label: 'Contact',
        url: '/admin/contact'
 
-  permit_params :image
+  permit_params :image, contact_items_attributes: %i[id title info]
 
   actions :show, :edit, :update
 

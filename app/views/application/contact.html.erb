@@ -5,24 +5,20 @@
     <div class='row content'>
       <div class='col-md-8 col-12 text-center align-items-center'>
         <div class='contact-info'>
-          <h4 class='contact-title'>
-            EMAIL
-          </h4>
-          <p class='contact-text'>
-            fdornas@gmail.com
-          </p>
+          <%- @contact.contact_items.each do |item| %>
+            <h4 class='contact-title'>
+              <%= item.title.upcase %>
+            </h4>
 
-          <h4 class='contact-title'>
-            TELEFONE
-          </h4>
-          <p class='contact-text'>
-            +55 31 9864-3630
-          </p>
+            <p class='contact-text'>
+              <%= item.info %>
+            </p>
+          <%- end %>
         </div>
       </div>
 
       <div class='col-md-4 col-12'>
-        <%= image_tag asset_path('cover.png'), class: 'about-img' %>
+        <%= image_tag @contact.image, class: 'about-img' %>
       </div>
     </div>
   </div>

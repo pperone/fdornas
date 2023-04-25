@@ -1,17 +1,17 @@
 class ApplicationController < ActionController::Base
   def home
-    render
+    @home = Home.first
   end
 
   def about
-    render
+    @about = About.first
   end
 
   def portfolio
-    render
+    @portfolio = Portfolio.first
   end
 
   def contact
-    render
+    @contact = Contact.first
   end
 end
