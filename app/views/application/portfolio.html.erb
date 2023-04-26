@@ -12,7 +12,13 @@
             <p class='portfolio-description'>
               <%= item.description.html_safe %>
             </p>
-            <%= image_tag item.image, class: 'portfolio-img' %>
+            <%- if item.image.attached? %>
+              <%- if item.image.content_type.include?('image') %>
+                <%= image_tag item.image, class: 'portfolio-img' %>
+              <%- else%>
+                <%= video_tag url_for(item.image), controls: true, class: 'portfolio-img' %>
+              <%- end %>
+            <%- end %>
           </div>
         <%- end %>
       </div>
