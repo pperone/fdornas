@@ -1,0 +1,27 @@
+<main class='fdornas-main'>
+  <div class='container'>
+    <%= render 'layouts/navbar' %>
+
+    <div class='row content'>
+      <div class='col-12 d-flex justify-content-center'>
+        <%- @gallery.gallery_items.each do |item| %>
+          <div class='gallery-item'>
+            <a href="/gallery_item/<%= item.id %>">
+              <h4 class='gallery-title'>
+                <%= item.title.upcase %>
+              </h4>
+
+              <%- if item.cover.attached? %>
+                <div class='gallery-img-container'>
+                  <%= image_tag item.cover, class: 'gallery-img' %>
+                </div>
+              <%- end %>
+            </a>
+          </div>
+        <%- end %>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+</main>

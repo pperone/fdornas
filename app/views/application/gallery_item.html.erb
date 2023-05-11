@@ -1,0 +1,20 @@
+<main class='fdornas-main'>
+  <div class='container'>
+    <%= render 'layouts/navbar' %>
+
+    <div class='row content'>
+      <div class='col-12 text-center'>
+        <h3><%= @item.title %></h3>
+        <div class='pictures-container d-flex justify-content-center'>
+          <%- @item.pictures.each do |picture| %>
+            <div class='picture-container'>
+              <%= image_tag picture, class: 'picture' %>
+            </div>
+          <%- end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+</main>

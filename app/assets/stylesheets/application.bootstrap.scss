@@ -97,6 +97,51 @@ body {
       }
     }
 
+    .contact-form-title {
+      font-family: 'Poppins Semibold';
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      font-size: 1.3em;
+    }
+
+    .gallery-item {
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .gallery-img-container {
+        width: 300px;
+        height: 300px;
+        background-color: black;
+
+        .gallery-img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .pictures-container {
+      flex-wrap: wrap;
+
+      .picture-container {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        margin: 5px;
+
+        .picture {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
     .portfolio-item {
       padding-bottom: 40px;
       margin-bottom: 40px;
@@ -179,5 +224,112 @@ body {
   .visible {
     display: block;
   }
+
+  .form-container {
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+
+    input {
+      border-color: black;
+      font-size: 0.8em;
+    }
+  
+    .password-change-info {
+      text-align: center;
+      color: gray;
+      font-size: 0.9em;
+    }
+  
+    .form-control {
+      margin-bottom: 5px;
+    }
+  
+    .top-field {
+      border-radius: 3px 3px 0 0;
+      height: 50px;
+      margin-bottom: 0;
+    }
+  
+    .middle-field {
+      border-radius: 0;
+      height: 50px;
+      margin-bottom: 0;
+    }
+  
+    .bottom-field {
+      border-radius: 0 0 3px 3px;
+      height: 50px;
+    }
+  
+    .standalone-field {
+      border-radius: 3px;
+      height: 50px;
+    }
+  
+    textarea {
+      border: solid 1px gray;
+      border-radius: 3px;
+      height: 150px;
+      width: 100%;
+      padding: 15px;
+      resize: none;
+      font-size: 0.8em;
+    }
+  
+    textarea::placeholder {
+      color: rgb(109, 117, 125);
+    }
+  
+    label {
+      display: none;
+    }
+  
+    .link-container {
+      text-align: center;
+      margin-top: 20px;
+  
+      p {
+        color: white;
+  
+        a {
+          color: black;
+          font-family: 'Poppins SemiBold';
+        }
+      }
+    }
+  
+    .error_notification {
+      color: gray;
+      margin-bottom: 15px;
+    }
+
+    .devise-cap {
+      font-family: 'Poppins Semibold';
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+    }
+    
+    #devise-button {
+      margin-top: 5px;
+      min-height: 50px;
+      width: 100%;
+      color: white;
+      font-family: 'Poppins SemiBold';
+      background-color: black;
+      border-color: black;
+      font-size: 0.9em;
+      border-radius: 3px;
+    }
+  }
 }
+
 @import 'actiontext.css';

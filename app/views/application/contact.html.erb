@@ -3,7 +3,7 @@
     <%= render 'layouts/navbar' %>
 
     <div class='row content'>
-      <div class='col-md-8 col-12 text-center align-items-center'>
+      <div class='col-md-4 col-12 text-center align-items-center'>
         <div class='contact-info'>
           <%- @contact.contact_items.each do |item| %>
             <h4 class='contact-title'>
@@ -15,6 +15,48 @@
             </p>
           <%- end %>
         </div>
+      </div>
+
+      <div class='col-md-4 col-12 text-center align-items-center form-container'>
+        <h3 class='contact-form-title'>CONTATO</h3>
+        <%= simple_form_for(@contact_form, as: 'contact', url: create_contact_form_path(@contact_form), html: { class: 'form-signin' }, data: { turbo: false }) do |f| %>
+          <%= f.error_notification %>
+
+          <%- if flash[:error] %>
+            <div class='devise-alert'>
+              <%= flash[:alert] %>
+            </div>
+          <%- elsif flash[:success] %>
+            <div class='devise-notice'>
+              <%= flash[:notice] %>
+            </div>
+          <%- end %>
+
+          <div class="form-inputs">
+            <%= f.input :name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { class: 'form-control standalone-field', placeholder: 'Nome Completo' }%>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { type: 'email', pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", class: 'form-control standalone-field', placeholder: 'Email' }%>
+            <%= f.text_area :message,
+                            required: true,
+                            autofocus: true,
+                            placeholder: 'Mensagem',
+                            input_html: { class: 'form-control standalone-field msg-area' }%>
+            
+            <div class= "d-none">
+              <%= f.label :nickname %>
+              <%= f.text_field :nickname %>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, 'Enviar', class: "btn btn-lg btn-primary btn-block devise-cap", id: 'devise-button' %>
+          </div>
+        <% end %>
       </div>
 
       <div class='col-md-4 col-12'>

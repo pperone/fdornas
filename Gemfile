@@ -51,6 +51,10 @@ gem "image_processing", "~> 1.2"
 gem 'activeadmin'
 gem 'activeadmin_quill_editor'
 gem 'devise'
+gem 'mail_form'
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'simple_form'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
