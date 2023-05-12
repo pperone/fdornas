@@ -50,6 +50,7 @@ gem "image_processing", "~> 1.2"
 
 gem 'activeadmin'
 gem 'activeadmin_quill_editor'
+gem 'aws-sdk-s3'
 gem 'devise'
 gem 'mail_form'
 gem 'pry-byebug'
