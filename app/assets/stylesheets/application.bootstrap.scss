@@ -36,8 +36,13 @@ body {
     @media (min-width: 1201px) {
       margin-top: 200px;
     }
+
+    .logo-link {
+      text-decoration: none;
+    }
   
     .title {
+      color: black;
       font-family: 'Poppins ExtraBold';
       margin-bottom: 0;
     }
