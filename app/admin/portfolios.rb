@@ -11,6 +11,7 @@ ActiveAdmin.register Portfolio do
     inputs do
       f.has_many :portfolio_items, new_record: 'New portfolio item', remove_record: 'Remove portfolio item', allow_destroy: true do |o|
         o.input :image, as: :file
+        o.input :order
         o.input :title
         o.input :description, as: :quill_editor, input_html: { data:
           { options:

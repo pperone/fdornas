@@ -4,7 +4,7 @@
 
     <div class='row content'>
       <div class='col-12'>
-        <%- @portfolio.portfolio_items.each do |item| %>
+        <%- @portfolio.portfolio_items.order(:order).each do |item| %>
           <div class='portfolio-item row'>
             <div class='col-12 col-md-7'>
               <h4 class='portfolio-title'>
