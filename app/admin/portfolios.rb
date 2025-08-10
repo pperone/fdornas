@@ -3,7 +3,7 @@ ActiveAdmin.register Portfolio do
        label: 'Portfolio',
        url: '/admin/portfolio'
 
-  permit_params portfolio_items_attributes: [:id, :title, :description, :image]
+  permit_params portfolio_items_attributes: [:id, :order, :title, :description, :image]
 
   actions :show, :edit, :update
 
