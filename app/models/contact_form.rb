@@ -9,7 +9,7 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: 'Contato - Formulário',
-      to: 'pperone@gmail.com',
+      to: 'fdornas@gmail.com',
       from: %("#{name}" <#{email}>)
     }
   end
