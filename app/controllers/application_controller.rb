@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     @gallery = Gallery.first
   end
 
+  def video
+    @video = Video.first
+  end
+
   def gallery_item
     @item = GalleryItem.find(params[:id])
   end

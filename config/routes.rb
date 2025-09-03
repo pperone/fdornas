@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resource :home, only: [:show, :edit, :update]
     resource :about, only: [:show, :edit, :update]
     resource :gallery, only: [:show, :edit, :update]
+    resource :video, only: [:show, :edit, :update]
     resource :portfolio, only: [:show, :edit, :update]
     resource :contact, only: [:show, :edit, :update]
   end
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get 'home', action: :home, controller: 'application'
   get 'about', action: :about, controller: 'application'
   get 'gallery', action: :gallery, controller: 'application'
+  get 'video', action: :video, controller: 'application'
   get 'gallery_item/:id', action: :gallery_item, controller: 'application'
   get 'portfolio', action: :portfolio, controller: 'application'
   get 'contact', action: :contact, controller: 'application'
